@@ -33,6 +33,7 @@
 html {
   box-sizing: border-box;
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -72,12 +73,17 @@ a:hover {
 /* HEADER */
 
 .header {
+  border-bottom: 1px solid var(--disabled-1);
+}
+
+.header__wrapper {
+  max-width: 1440px;
+  margin: auto;
   padding: 0 56px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   align-items: center;
-  border-bottom: 1px solid var(--disabled-1);
 }
 
 .header__logo {
@@ -134,6 +140,13 @@ a:hover {
   outline-offset: -2px;
 }
 
+/* MAIN */
+
+.main__wrapper {
+  max-width: 1440px;
+  margin: auto;
+}
+
 /* BREADCRUMBS */
 
 .breadcrumbs-navigation {
@@ -186,9 +199,14 @@ a:hover {
 /* FOOTER */
 
 .footer {
-  min-height: 428px;
-  padding: 80px 88px 33px;
   border-top: 1px solid var(--disabled-1);
+}
+
+.footer__wrapper {
+  max-width: 1440px;
+  min-height: 428px;
+  margin: auto;
+  padding: 80px 88px 33px;
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
@@ -293,4 +311,190 @@ a:hover {
 
 .social-links__item--instagram a {
   background-image: url('img/icons/instagram.svg');
+}
+
+/* YOU MAY ALSO LIKE */
+
+.you-may-also-like {
+  padding: 0 128px 108px;
+}
+
+.you-may-also-like__heading {
+  font-weight: inherit;
+  font-size: 22px;
+  line-height: 27px;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: var(--primary);
+  margin: 0 0 64px;
+}
+
+.you-may-also-like__heading::first-letter {
+  text-transform: uppercase;
+}
+
+.you-may-also-like__product-carousel {
+  margin: 0;
+}
+
+/* PRODUCT CAROUSEL */
+
+.product-carousel {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 64px;
+}
+
+/* PRODUCT CARD  */
+
+.product-card {
+  max-width: 248px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border-radius: 5px;
+  position: relative;
+}
+
+.product-card:focus-within {
+  outline: 2px solid var(--primary);
+  outline-offset: 8px;
+}
+
+.product-card * {
+  order: 2;
+}
+
+.product-card__image {
+  order: 0;
+  margin-bottom: 20px;
+}
+
+.product-card__heading {
+  order: 1;
+  font-weight: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--tertiary-3);
+  margin: 0 0 8px;
+}
+
+.product-card__heading a {
+  display: inline-block;
+  color: inherit;
+  outline-offset: 4px;
+}
+
+.product-card__heading a:focus-visible {
+  outline: none;
+}
+
+.product-card__heading a::first-letter {
+  text-transform: uppercase;
+}
+
+.product-card__available-colors-list {
+  margin: 0 0 8px;
+}
+
+.available-colors-list {
+  padding: 0 2px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.available-colors-list__item {
+  width: 12px;
+  height: 12px;
+}
+
+.available-colors-list__item--brown {
+  background-color: var(--brown);
+}
+
+.available-colors-list__item--beige {
+  background-color: var(--beige);
+}
+
+.available-colors-list__item--pink {
+  background-color: var(--pink);
+}
+
+.available-colors-list__item--purple {
+  background-color: var(--purple);
+}
+
+.product-card__price {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--tertiary-3);
+  text-transform: uppercase;
+}
+
+.product-card__tags-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-height: 360px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 24px;
+  position: absolute;
+  top: 8px;
+  left: 12px;
+}
+
+.tags-list__item {
+  max-width: 224px;
+  max-height: 22px;
+  padding: 3px 5px 4px;
+  background-color: var(--white);
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--tertiary-1);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.tags-list__item::first-letter {
+  text-transform: uppercase;
+}
+
+/* FORM */
+
+input[type='number'] {
+  width: fit-content;
+  width: 40px;
+  height: 40px;
+  padding: 10px 13px;
+  transition: width 500ms ease-out;
+  position: relative;
+
+  appearance: textfield;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  color: inherit;
+}
+
+input[type='number']:focus-visible,
+input[type='number']:hover {
+  width: 80px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
 }
