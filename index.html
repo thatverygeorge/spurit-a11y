@@ -43,7 +43,7 @@
             <li class="site-navigation__item">
               <a href="/account">account</a>
             </li>
-            <li class="site-navigation__item">
+            <li class="site-navigation__item site-navigation__item--cart">
               <a href="/cart">cart (<span>0</span>)</a>
             </li>
           </ul>
@@ -152,17 +152,25 @@
             <span class="visually-hidden">price:</span>
             chf 40
           </span>
-          <span>tax included</span>
+          <span class="order-details__tax-info">tax included</span>
 
           <form
             class="order-details-form order-details__form"
             action="/cart"
             aria-label="order details form"
           >
-            <fieldset>
+            <fieldset
+              class="order-details-form__fieldset order-details-form__fieldset--size"
+            >
               <legend>size</legend>
               <div>
-                <input type="radio" name="size" id="size-xs" value="xs" />
+                <input
+                  class="order-details-form__input-size visually-hidden"
+                  type="radio"
+                  name="size"
+                  id="size-xs"
+                  value="xs"
+                />
                 <label for="size-xs">
                   <span class="visually-hidden">size:</span>
                   xs
@@ -170,7 +178,14 @@
               </div>
 
               <div>
-                <input type="radio" name="size" id="size-s" value="s" checked />
+                <input
+                  class="order-details-form__input-size visually-hidden"
+                  type="radio"
+                  name="size"
+                  id="size-s"
+                  value="s"
+                  checked
+                />
                 <label for="size-s">
                   <span class="visually-hidden">size:</span>
                   s
@@ -178,7 +193,13 @@
               </div>
 
               <div>
-                <input type="radio" name="size" id="size-m" value="m" />
+                <input
+                  class="order-details-form__input-size visually-hidden"
+                  type="radio"
+                  name="size"
+                  id="size-m"
+                  value="m"
+                />
                 <label for="size-m">
                   <span class="visually-hidden">size:</span>
                   m
@@ -186,7 +207,13 @@
               </div>
 
               <div>
-                <input type="radio" name="size" id="size-l" value="l" />
+                <input
+                  class="order-details-form__input-size visually-hidden"
+                  type="radio"
+                  name="size"
+                  id="size-l"
+                  value="l"
+                />
                 <label for="size-l">
                   <span class="visually-hidden">size:</span>
                   l
@@ -194,7 +221,13 @@
               </div>
 
               <div>
-                <input type="radio" name="size" id="size-xl" value="xl" />
+                <input
+                  class="order-details-form__input-size visually-hidden"
+                  type="radio"
+                  name="size"
+                  id="size-xl"
+                  value="xl"
+                />
                 <label for="size-xl">
                   <span class="visually-hidden">size:</span>
                   xl
@@ -202,7 +235,14 @@
               </div>
 
               <div>
-                <input type="radio" name="size" id="size-2xl" value="2xl" />
+                <input
+                  class="order-details-form__input-size visually-hidden"
+                  type="radio"
+                  name="size"
+                  id="size-2xl"
+                  value="2xl"
+                  disabled
+                />
                 <label for="size-2xl">
                   <span class="visually-hidden">size:</span>
                   2xl
@@ -210,10 +250,13 @@
               </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset
+              class="order-details-form__fieldset order-details-form__fieldset--color"
+            >
               <legend>color - <span>white</span></legend>
-              <div>
+              <div class="order-details-form__input-wrapper">
                 <input
+                  class="order-details-form__input-color order-details-form__input-color--white visually-hidden"
                   type="radio"
                   name="color"
                   id="color-white"
@@ -221,112 +264,156 @@
                   checked
                 />
                 <label for="color-white">
-                  <span class="visually-hidden">color:</span>
-                  white
+                  <span class="visually-hidden">color: white</span>
                 </label>
-                <span class="visually-hidden" aria-hidden="true">
+                <span
+                  class="order-details-form__tooltip-color"
+                  aria-hidden="true"
+                >
                   white latte
                 </span>
               </div>
 
-              <div>
+              <div class="order-details-form__input-wrapper">
                 <input
+                  class="order-details-form__input-color order-details-form__input-color--black visually-hidden"
                   type="radio"
                   name="color"
                   id="color-black"
                   value="black"
                 />
                 <label for="color-black">
-                  <span class="visually-hidden">color:</span>
-                  black
+                  <span class="visually-hidden">color: black</span>
                 </label>
-                <span class="visually-hidden" aria-hidden="true">
+                <span
+                  class="order-details-form__tooltip-color"
+                  aria-hidden="true"
+                >
                   black latte
                 </span>
               </div>
 
-              <div>
-                <input type="radio" name="color" id="color-gray" value="gray" />
+              <div class="order-details-form__input-wrapper">
+                <input
+                  class="order-details-form__input-color order-details-form__input-color--gray visually-hidden"
+                  type="radio"
+                  name="color"
+                  id="color-gray"
+                  value="gray"
+                />
                 <label for="color-gray">
-                  <span class="visually-hidden">color:</span>
-                  gray
+                  <span class="visually-hidden">color: gray</span>
                 </label>
-                <span class="visually-hidden" aria-hidden="true">
+                <span
+                  class="order-details-form__tooltip-color"
+                  aria-hidden="true"
+                >
                   gray latte
                 </span>
               </div>
 
-              <div>
+              <div class="order-details-form__input-wrapper">
                 <input
+                  class="order-details-form__input-color order-details-form__input-color--purple visually-hidden"
                   type="radio"
                   name="color"
                   id="color-purple"
                   value="purple"
                 />
                 <label for="color-purple">
-                  <span class="visually-hidden">color:</span>
-                  purple
+                  <span class="visually-hidden">color: purple</span>
                 </label>
-                <span class="visually-hidden" aria-hidden="true">
+                <span
+                  class="order-details-form__tooltip-color"
+                  aria-hidden="true"
+                >
                   purple latte
                 </span>
               </div>
 
-              <div>
-                <input type="radio" name="color" id="color-pink" value="pink" />
+              <div class="order-details-form__input-wrapper">
+                <input
+                  class="order-details-form__input-color order-details-form__input-color--pink visually-hidden"
+                  type="radio"
+                  name="color"
+                  id="color-pink"
+                  value="pink"
+                  disabled
+                />
                 <label for="color-pink">
-                  <span class="visually-hidden">color:</span>
-                  pink
+                  <span class="visually-hidden">color: pink</span>
                 </label>
-                <span class="visually-hidden" aria-hidden="true">
+                <span
+                  class="order-details-form__tooltip-color"
+                  aria-hidden="true"
+                >
                   pink latte
                 </span>
               </div>
 
-              <div>
+              <div class="order-details-form__input-wrapper">
                 <input
+                  class="order-details-form__input-color order-details-form__input-color--beige visually-hidden"
                   type="radio"
                   name="color"
                   id="color-beige"
                   value="beige"
+                  disabled
                 />
                 <label for="color-beige">
-                  <span class="visually-hidden">color:</span>
-                  beige
+                  <span class="visually-hidden">color: beige</span>
                 </label>
-                <span class="visually-hidden" aria-hidden="true">
+                <span
+                  class="order-details-form__tooltip-color"
+                  aria-hidden="true"
+                >
                   beige latte
                 </span>
               </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="order-details-form__fieldset">
               <legend>quantity</legend>
-              <button type="button">
+              <button
+                type="button"
+                class="order-details-form__button-quantity order-details-form__button-quantity--decrease"
+              >
                 <span class="visually-hidden">decrease quantity by one</span>
-                <span aria-hidden="true">-</span>
+                <span aria-hidden="true">−</span>
               </button>
               <input
+                class="order-details-form__input-quantity"
                 type="number"
+                name="quantity"
                 value="1"
                 min="1"
-                max="9"
                 step="1"
-                placeholder="Qty."
+                max="9"
+                autocomplete="false"
                 required
+                aria-label="quantity"
               />
-              <button type="button">
+              <button
+                type="button"
+                class="order-details-form__button-quantity order-details-form__button-quantity--increase"
+              >
                 <span class="visually-hidden">increase quantity by one</span>
                 <span aria-hidden="true">+</span>
               </button>
             </fieldset>
 
-            <button type="button">
+            <button
+              type="button"
+              class="order-details-form__button order-details-form__button--add-to-cart"
+            >
               add
               <span class="visually-hidden">white unisex t-shirt</span>
               to cart
             </button>
-            <button type="submit">
+            <button
+              type="submit"
+              class="order-details-form__button order-details-form__button--blue"
+            >
               <span class="visually-hidden">white unisex t-shirt — </span>
               buy it now
             </button>
