@@ -19,6 +19,8 @@
   --beige: #f8cab1;
   --brown: #c88252;
 
+  --red: #ff0000;
+
   --color-ae: #aeaeb0;
   --color-bd: #bdbdbd;
   --color-f2: #f2f2f2;
@@ -127,7 +129,7 @@ a:hover {
   min-height: 87px;
   padding: 8px;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   font-weight: inherit;
   letter-spacing: 0.01em;
   color: inherit;
@@ -188,7 +190,7 @@ a:hover {
   max-width: 300px;
   padding: 4px;
   font-size: 12px;
-  line-height: 15px;
+  line-height: 1.25;
   font-weight: inherit;
   color: inherit;
   text-overflow: ellipsis;
@@ -206,7 +208,7 @@ a:hover {
   position: absolute;
   right: -10px;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 1.214;
   font-weight: 600;
   color: var(--disabled-2);
 }
@@ -240,14 +242,14 @@ a:hover {
   font-weight: 400;
   margin: 0 0 8px;
   font-size: 13px;
-  line-height: 18px;
+  line-height: 1.38;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 .footer__store-info {
   font-size: 16px;
-  line-height: 32px;
+  line-height: 2;
   letter-spacing: 1px;
   color: var(--tertiary-1);
   text-transform: capitalize;
@@ -260,7 +262,7 @@ a:hover {
 .footer__copyright {
   margin-top: auto;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   color: var(--tertiary-1);
 }
 
@@ -278,16 +280,7 @@ a:hover {
 .footer-navigation-list__item a {
   font-weight: inherit;
   font-size: 16px;
-  line-height: 32px;
-  letter-spacing: 1px;
-  color: var(--tertiary-1);
-  text-transform: capitalize;
-}
-
-.footer-navigation-list__item a {
-  font-weight: inherit;
-  font-size: 16px;
-  line-height: 32px;
+  line-height: 2;
   letter-spacing: 1px;
   color: var(--tertiary-1);
   text-transform: capitalize;
@@ -339,7 +332,7 @@ a:hover {
 .you-may-also-like__heading {
   font-weight: inherit;
   font-size: 22px;
-  line-height: 27px;
+  line-height: 1.23;
   letter-spacing: 0.01em;
   text-align: center;
   color: var(--primary);
@@ -394,7 +387,7 @@ a:hover {
   order: 1;
   font-weight: inherit;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   text-align: center;
   color: var(--tertiary-3);
   margin: 0 0 8px;
@@ -450,7 +443,7 @@ a:hover {
 
 .product-card__price {
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   text-align: center;
   color: var(--tertiary-3);
   text-transform: uppercase;
@@ -479,7 +472,7 @@ a:hover {
   padding: 3px 5px 4px;
   background-color: var(--white);
   font-size: 13px;
-  line-height: 16px;
+  line-height: 1.23;
   color: var(--tertiary-1);
   overflow: hidden;
   white-space: nowrap;
@@ -516,7 +509,7 @@ a:hover {
   display: block;
   padding: 32px 32px 32px 0;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   letter-spacing: 0.01em;
   color: var(--tertiary-3);
   text-transform: capitalize;
@@ -549,7 +542,7 @@ a:hover {
   all: unset;
   display: inline-block;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   letter-spacing: 0.01em;
   color: var(--tertiary-3);
   margin-bottom: 40px;
@@ -576,7 +569,7 @@ a:hover {
 
 .order-details__heading {
   font-size: 22px;
-  line-height: 27px;
+  line-height: 1.23;
   font-weight: inherit;
   letter-spacing: 0.01em;
   color: var(--tertiary-3);
@@ -589,7 +582,7 @@ a:hover {
 
 .order-details__price {
   font-size: 20px;
-  line-height: 25px;
+  line-height: 1.25;
   letter-spacing: 0.01em;
   color: var(--tertiary-3);
   text-transform: uppercase;
@@ -599,7 +592,7 @@ a:hover {
 
 .order-details__tax-info {
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   letter-spacing: 0.01em;
   color: var(--tertiary-1);
   display: block;
@@ -612,7 +605,7 @@ a:hover {
 
 .order-details__description {
   font-size: 18px;
-  line-height: 22px;
+  line-height: 1.22;
   letter-spacing: -0.01em;
   color: var(--tertiary-3);
 }
@@ -632,7 +625,7 @@ a:hover {
 .order-details-form__fieldset legend {
   margin: 0 0 12px 0;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   letter-spacing: 0.01em;
   color: var(--tertiary-3);
   text-transform: capitalize;
@@ -647,7 +640,7 @@ a:hover {
   margin-bottom: 12px;
   font-family: inherit;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 1.21;
   word-break: break-all;
   letter-spacing: 0.16em;
   color: var(--tertiary-3);
@@ -686,14 +679,14 @@ a:hover {
   border-left: 1px solid var(--disabled-1);
   background-color: var(--white);
   font-size: 18px;
-  line-height: 18px;
+  line-height: 1;
   color: var(--tertiary-1);
   padding: 5px;
   cursor: pointer;
   font-family: inherit;
 }
 
-.order-details-form__button-quantity:last-child {
+.order-details-form__button-quantity:last-of-type {
   border-right: 1px solid var(--disabled-1);
 }
 
@@ -723,7 +716,7 @@ a:hover {
   appearance: textfield;
   font-family: inherit;
   font-size: 18px;
-  line-height: 18px;
+  line-height: 1;
   color: var(--tertiary-3);
 
   border: none;
@@ -746,9 +739,27 @@ a:hover {
   outline-offset: -2px;
 }
 
+.order-details-form__input-quantity:invalid {
+  outline: 2px solid var(--red);
+  outline-offset: -2px;
+}
+
 .order-details-form__input-quantity:disabled {
   outline: none;
   opacity: 0.3;
+}
+
+.order-details-form__quantity-error {
+  flex-basis: 100%;
+  display: block;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: -0.01em;
+  color: var(--tertiary-3);
+}
+
+.order-details-form__quantity-error.active {
+  padding-top: 8px;
 }
 
 .order-details-form__fieldset--size,
@@ -767,7 +778,7 @@ a:hover {
   padding: 4px;
   word-break: break-all;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   letter-spacing: -0.01em;
   color: var(--tertiary-3);
   text-transform: uppercase;
@@ -897,7 +908,7 @@ a:hover {
   padding: 2px;
 
   font-size: 13px;
-  line-height: 16px;
+  line-height: 1.23;
   text-align: center;
   color: var(--tertiary-1);
   white-space: nowrap;

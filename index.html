@@ -20,7 +20,7 @@
           />
           <span class="visually-hidden">home</span>
         </a>
-        <nav class="site-navigation header__site-navigation" aria-label="site">
+        <nav class="site-navigation header__site-navigation" aria-label="main">
           <ul class="site-navigation__list" role="list">
             <li class="site-navigation__item">
               <a href="/women">women</a>
@@ -41,7 +41,12 @@
               <a href="/account">account</a>
             </li>
             <li class="site-navigation__item site-navigation__item--cart">
-              <a href="/cart">cart (<span>0</span>)</a>
+              <a href="/cart">
+                <span aria-hidden="true">cart (0)</span>
+                <span class="visually-hidden" aria-live="polite" role="status">
+                  items in cart: 0
+                </span>
+              </a>
             </li>
           </ul>
         </nav>
@@ -52,7 +57,7 @@
       <div class="main__wrapper">
         <nav
           class="breadcrumbs-navigation main__breadcrumbs-navigation"
-          aria-label="breadcrumb"
+          aria-label="breadcrumbs"
         >
           <ol class="breadcrumbs-navigation__list" role="list">
             <li class="breadcrumbs-navigation__item">
@@ -94,7 +99,7 @@
               type="checkbox"
               name="sizing-and-fit"
               id="sizing-and-fit"
-              autocomplete="false"
+              autocomplete="off"
               aria-hidden="true"
             />
             <label for="sizing-and-fit">sizing & fit</label>
@@ -109,7 +114,7 @@
               type="checkbox"
               name="composition-and-care"
               id="composition-and-care"
-              autocomplete="false"
+              autocomplete="off"
               aria-hidden="true"
             />
             <label for="composition-and-care">composition & care</label>
@@ -124,7 +129,7 @@
               type="checkbox"
               name="delivery-and-returns"
               id="delivery-and-returns"
-              autocomplete="false"
+              autocomplete="off"
               aria-hidden="true"
             />
             <label for="delivery-and-returns">delivery & returns</label>
@@ -250,7 +255,7 @@
             <fieldset
               class="order-details-form__fieldset order-details-form__fieldset--color"
             >
-              <legend>color - <span>white</span></legend>
+              <legend>color - <span></span></legend>
               <div class="order-details-form__input-wrapper">
                 <input
                   class="order-details-form__input-color order-details-form__input-color--white visually-hidden"
@@ -386,7 +391,7 @@
                 min="1"
                 step="1"
                 max="9"
-                autocomplete="false"
+                autocomplete="off"
                 required
                 aria-label="quantity"
               />
@@ -397,6 +402,12 @@
                 <span class="visually-hidden">increase quantity by one</span>
                 <span aria-hidden="true">+</span>
               </button>
+              <span
+                class="order-details-form__quantity-error"
+                aria-live="polite"
+                role="alert"
+              >
+              </span>
             </fieldset>
 
             <button
