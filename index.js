@@ -50,6 +50,10 @@ const cartHidden = document.querySelector(
 
 const formOrderDetails = document.querySelector('.order-details-form');
 
+const productDescriptionWrapper = document.querySelector(
+  '.product-description__wrapper'
+);
+
 fieldsetColorLegendSpan.textContent = inputColorChecked.value;
 
 function showError(message) {
@@ -129,4 +133,20 @@ formOrderDetails.addEventListener('submit', (evt) => {
   const color = data.get('color');
   const quantity = Number(data.get('quantity'));
   console.log({ size, color, quantity });
+});
+
+productDescriptionWrapper.addEventListener('click', (evt) => {
+  const { target } = evt;
+
+  if (!target.matches('.product-description__button')) {
+    return;
+  }
+
+  const id = target.getAttribute('aria-controls');
+  const description = document.getElementById(id);
+  const isExpanded =
+    target.getAttribute('aria-expanded') === 'true' ? true : false;
+
+  description.style.display = isExpanded ? 'none' : 'block';
+  target.setAttribute('aria-expanded', !isExpanded);
 });

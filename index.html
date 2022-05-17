@@ -10,6 +10,7 @@
   <body>
     <header class="header">
       <div class="header__wrapper">
+        <a class="skip-to-content-link" href="#main">skip to content</a>
         <a class="header__logo" href="/home">
           <img
             src="img/logo-susparsa.png"
@@ -51,12 +52,12 @@
           </ul>
         </nav>
       </div>
-    </header>
 
-    <main class="main">
-      <div class="main__wrapper">
+      <hr class="header__horizontal-rule" />
+
+      <div class="header__wrapper">
         <nav
-          class="breadcrumbs-navigation main__breadcrumbs-navigation"
+          class="breadcrumbs-navigation header__breadcrumbs-navigation"
           aria-label="breadcrumbs"
         >
           <ol class="breadcrumbs-navigation__list" role="list">
@@ -73,82 +74,20 @@
             </li>
           </ol>
         </nav>
+      </div>
+    </header>
 
-        <section
-          class="product-description main__product-description"
-          aria-labelledby="heading-description"
-        >
-          <h2
-            class="heading heading--xl product-description__heading visually-hidden"
-            id="heading-description"
-          >
-            white unisex t-shirt — additional description
-          </h2>
-          <img
-            class="product-description__image"
-            src="img/product-main.jpg"
-            width="473"
-            height="707"
-            alt=""
-            role="presentation"
-          />
-
-          <div class="product-description__info-checkbox-wrapper">
-            <input
-              class="product-description__info-checkbox visually-hidden"
-              type="checkbox"
-              name="sizing-and-fit"
-              id="sizing-and-fit"
-              autocomplete="off"
-              aria-hidden="true"
-            />
-            <label for="sizing-and-fit">sizing & fit</label>
-            <p class="visually-hidden">
-              Olga is 175cm, she is wearing a size S.
-            </p>
-          </div>
-
-          <div class="product-description__info-checkbox-wrapper">
-            <input
-              class="product-description__info-checkbox visually-hidden"
-              type="checkbox"
-              name="composition-and-care"
-              id="composition-and-care"
-              autocomplete="off"
-              aria-hidden="true"
-            />
-            <label for="composition-and-care">composition & care</label>
-            <p class="visually-hidden">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            </p>
-          </div>
-
-          <div class="product-description__info-checkbox-wrapper">
-            <input
-              class="product-description__info-checkbox visually-hidden"
-              type="checkbox"
-              name="delivery-and-returns"
-              id="delivery-and-returns"
-              autocomplete="off"
-              aria-hidden="true"
-            />
-            <label for="delivery-and-returns">delivery & returns</label>
-            <p class="visually-hidden">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            </p>
-          </div>
-        </section>
-
-        <section
-          class="order-details main__order-details"
-          aria-labelledby="heading-white-unisex-t-shirt"
-        >
+    <main class="main" id="main">
+      <section
+        class="main__wrapper"
+        aria-labelledby="heading-white-unisex-t-shirt"
+      >
+        <div class="order-details main__order-details">
           <h1
             class="heading heading--2xl order-details__heading"
             id="heading-white-unisex-t-shirt"
           >
             white unisex t-shirt
-            <span class="visually-hidden">— order details </span>
           </h1>
           <span class="order-details__price">
             <span class="visually-hidden">price:</span>
@@ -159,7 +98,7 @@
           <form
             class="order-details-form order-details__form"
             action="/cart"
-            aria-label="order details form"
+            aria-label="order details"
           >
             <fieldset
               class="order-details-form__fieldset order-details-form__fieldset--size"
@@ -434,223 +373,337 @@
             <br />
             Certification of cotton - GOTS
           </p>
-        </section>
+        </div>
 
-        <section
-          class="you-may-also-like main__you-may-also-like"
-          aria-labelledby="heading-you-may-also-like"
+        <div class="product-description main__product-description">
+          <img
+            class="product-description__image"
+            src="img/product-main.jpg"
+            width="473"
+            height="707"
+            alt=""
+            role="presentation"
+          />
+
+          <div class="product-description__wrapper">
+            <dl class="product-description__description-list">
+              <dt class="product-description__description-term">
+                <button
+                  class="product-description__button"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="description-1"
+                >
+                  sizing & fit
+                </button>
+              </dt>
+              <dd class="product-description__description-definition">
+                <div id="description-1">
+                  Olga is 175cm, she is wearing a size S.
+                </div>
+              </dd>
+            </dl>
+
+            <dl class="product-description__description-list">
+              <dt class="product-description__description-term">
+                <button
+                  class="product-description__button"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="description-2"
+                >
+                  composition & care
+                </button>
+              </dt>
+              <dd class="product-description__description-definition">
+                <div id="description-2">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                </div>
+              </dd>
+            </dl>
+
+            <dl class="product-description__description-list">
+              <dt class="product-description__description-term">
+                <button
+                  class="product-description__button"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="description-3"
+                >
+                  delivery & returns
+                </button>
+              </dt>
+              <dd class="product-description__description-definition">
+                <div id="description-3">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                </div>
+              </dd>
+            </dl>
+          </div>
+      </section>
+
+      <section
+        class="you-may-also-like main__you-may-also-like"
+        aria-labelledby="heading-you-may-also-like"
+      >
+        <h2
+          class="heading heading--xl you-may-also-like__heading"
+          id="heading-you-may-also-like"
         >
-          <h2
-            class="heading heading--xl you-may-also-like__heading"
-            id="heading-you-may-also-like"
-          >
-            you may also like
-          </h2>
-          <ul
-            class="product-carousel you-may-also-like__product-carousel"
-            role="list"
-          >
-            <li class="product-carousel__item">
-              <article class="product-card product-carousel__product-card">
-                <h3 class="heading heading--l product-card__heading">
-                  <a href="">product name</a>
-                </h3>
-                <img
-                  class="product-card__image"
-                  src="img/product-1.jpg"
-                  width="248"
-                  height="368"
-                  alt=""
-                  role="presentation"
-                />
-                <ul
-                  class="available-colors-list product-card__available-colors-list"
-                  role="list"
-                  aria-label="available colors"
+          you may also like
+        </h2>
+        <ul
+          class="product-carousel you-may-also-like__product-carousel"
+          role="list"
+        >
+          <li class="product-carousel__item">
+            <article class="product-card product-carousel__product-card">
+              <h3 class="heading heading--l product-card__heading">
+                <a href="">product name</a>
+              </h3>
+              <img
+                class="product-card__image"
+                src="img/product-1.jpg"
+                width="248"
+                height="368"
+                alt=""
+                role="presentation"
+              />
+              <ul
+                class="available-colors-list product-card__available-colors-list"
+                role="list"
+                aria-label="available colors"
+              >
+                <li
+                  class="available-colors-list__item available-colors-list__item--brown"
                 >
-                  <li
-                    class="available-colors-list__item available-colors-list__item--brown"
-                  >
-                    <span class="visually-hidden">brown</span>
-                  </li>
-                  <li
-                    class="available-colors-list__item available-colors-list__item--beige"
-                  >
-                    <span class="visually-hidden">beige</span>
-                  </li>
-                  <li
-                    class="available-colors-list__item available-colors-list__item--pink"
-                  >
-                    <span class="visually-hidden">pink</span>
-                  </li>
-                  <li
-                    class="available-colors-list__item available-colors-list__item--purple"
-                  >
-                    <span class="visually-hidden">purple</span>
-                  </li>
-                </ul>
-                <span class="product-card__price">
-                  <span class="visually-hidden">price:</span>
-                  chf 40
-                </span>
-              </article>
-            </li>
-            <li class="product-carousel__item">
-              <article class="product-card product-carousel__product-card">
-                <h3 class="heading heading--l product-card__heading">
-                  <a href="">product name</a>
-                </h3>
-                <img
-                  class="product-card__image"
-                  src="img/product-2.jpg"
-                  width="248"
-                  height="368"
-                  alt=""
-                  role="presentation"
-                />
-                <ul
-                  class="available-colors-list product-card__available-colors-list"
-                  role="list"
-                  aria-label="available colors"
+                  <span class="visually-hidden">
+                    <span class="visually-hidden">product name color:</span>
+                    brown
+                  </span>
+                </li>
+                <li
+                  class="available-colors-list__item available-colors-list__item--beige"
                 >
-                  <li
-                    class="available-colors-list__item available-colors-list__item--brown"
-                  >
-                    <span class="visually-hidden">brown</span>
-                  </li>
-                  <li
-                    class="available-colors-list__item available-colors-list__item--beige"
-                  >
-                    <span class="visually-hidden">beige</span>
-                  </li>
-                  <li
-                    class="available-colors-list__item available-colors-list__item--pink"
-                  >
-                    <span class="visually-hidden">pink</span>
-                  </li>
-                  <li
-                    class="available-colors-list__item available-colors-list__item--purple"
-                  >
-                    <span class="visually-hidden">purple</span>
-                  </li>
-                </ul>
-                <span class="product-card__price">
-                  <span class="visually-hidden">price:</span>
-                  chf 40
-                </span>
-              </article>
-            </li>
-            <li class="product-carousel__item">
-              <article class="product-card product-carousel__product-card">
-                <h3 class="heading heading--l product-card__heading">
-                  <a href="">product name</a>
-                </h3>
-                <img
-                  class="product-card__image"
-                  src="img/product-3.jpg"
-                  width="248"
-                  height="368"
-                  alt=""
-                  role="presentation"
-                />
-                <ul
-                  class="available-colors-list product-card__available-colors-list"
-                  role="list"
-                  aria-label="available colors"
+                  <span class="visually-hidden">
+                    <span class="visually-hidden">product name color:</span>
+                    beige
+                  </span>
+                </li>
+                <li
+                  class="available-colors-list__item available-colors-list__item--pink"
                 >
-                  <li
-                    class="available-colors-list__item available-colors-list__item--brown"
-                  >
-                    <span class="visually-hidden">brown</span>
-                  </li>
-                  <li
-                    class="available-colors-list__item available-colors-list__item--beige"
-                  >
-                    <span class="visually-hidden">beige</span>
-                  </li>
-                  <li
-                    class="available-colors-list__item available-colors-list__item--pink"
-                  >
-                    <span class="visually-hidden">pink</span>
-                  </li>
-                  <li
-                    class="available-colors-list__item available-colors-list__item--purple"
-                  >
-                    <span class="visually-hidden">purple</span>
-                  </li>
-                </ul>
-                <span class="product-card__price">
-                  <span class="visually-hidden">price:</span>
-                  chf 40
-                </span>
-                <ul
-                  class="tags-list product-card__tags-list"
-                  role="list"
-                  aria-label="tags"
+                  <span class="visually-hidden">
+                    <span class="visually-hidden">product name color:</span>
+                    pink
+                  </span>
+                </li>
+                <li
+                  class="available-colors-list__item available-colors-list__item--purple"
                 >
-                  <li class="tags-list__item">Sold out</li>
-                </ul>
-              </article>
-            </li>
-            <li class="product-carousel__item">
-              <article class="product-card product-carousel__product-card">
-                <h3 class="heading heading--l product-card__heading">
-                  <a href="">product name</a>
-                </h3>
-                <img
-                  class="product-card__image"
-                  src="img/product-4.jpg"
-                  width="248"
-                  height="368"
-                  alt=""
-                  role="presentation"
-                />
-                <ul
-                  class="available-colors-list product-card__available-colors-list"
-                  role="list"
-                  aria-label="available colors"
+                  <span class="visually-hidden">
+                    <span class="visually-hidden">product name color:</span>
+                    purple
+                  </span>
+                </li>
+              </ul>
+              <span class="product-card__price">
+                <span class="visually-hidden">product name price:</span>
+                chf 40
+              </span>
+            </article>
+          </li>
+          <li class="product-carousel__item">
+            <article class="product-card product-carousel__product-card">
+              <h3 class="heading heading--l product-card__heading">
+                <a href="">product name</a>
+              </h3>
+              <img
+                class="product-card__image"
+                src="img/product-2.jpg"
+                width="248"
+                height="368"
+                alt=""
+                role="presentation"
+              />
+              <ul
+                class="available-colors-list product-card__available-colors-list"
+                role="list"
+                aria-label="available colors"
+              >
+                <li
+                  class="available-colors-list__item available-colors-list__item--brown"
                 >
-                  <li
-                    class="available-colors-list__item available-colors-list__item--brown"
-                  >
-                    <span class="visually-hidden">brown</span>
-                  </li>
-                  <li
-                    class="available-colors-list__item available-colors-list__item--beige"
-                  >
-                    <span class="visually-hidden">beige</span>
-                  </li>
-                  <li
-                    class="available-colors-list__item available-colors-list__item--pink"
-                  >
-                    <span class="visually-hidden">pink</span>
-                  </li>
-                  <li
-                    class="available-colors-list__item available-colors-list__item--purple"
-                  >
-                    <span class="visually-hidden">purple</span>
-                  </li>
-                </ul>
-                <span class="product-card__price">
-                  <span class="visually-hidden">price:</span>
-                  chf 40
-                </span>
-              </article>
-            </li>
-          </ul>
-        </section>
-      </div>
+                  <span class="visually-hidden">
+                    <span class="visually-hidden">product name color:</span>
+                    brown
+                  </span>
+                </li>
+                <li
+                  class="available-colors-list__item available-colors-list__item--beige"
+                >
+                  <span class="visually-hidden">
+                    <span class="visually-hidden">product name color:</span>
+                    beige
+                  </span>
+                </li>
+                <li
+                  class="available-colors-list__item available-colors-list__item--pink"
+                >
+                  <span class="visually-hidden">
+                    <span class="visually-hidden">product name color:</span>
+                    pink
+                  </span>
+                </li>
+                <li
+                  class="available-colors-list__item available-colors-list__item--purple"
+                >
+                  <span class="visually-hidden">
+                    <span class="visually-hidden">product name color:</span>
+                    purple
+                  </span>
+                </li>
+              </ul>
+              <span class="product-card__price">
+                <span class="visually-hidden">product name price:</span>
+                chf 40
+              </span>
+            </article>
+          </li>
+          <li class="product-carousel__item">
+            <article class="product-card product-carousel__product-card">
+              <h3 class="heading heading--l product-card__heading">
+                <a href="">product name</a>
+              </h3>
+              <img
+                class="product-card__image"
+                src="img/product-3.jpg"
+                width="248"
+                height="368"
+                alt=""
+                role="presentation"
+              />
+              <ul
+                class="available-colors-list product-card__available-colors-list"
+                role="list"
+                aria-label="available colors"
+              >
+                <li
+                  class="available-colors-list__item available-colors-list__item--brown"
+                >
+                  <span class="visually-hidden">
+                    <span class="visually-hidden">product name color:</span>
+                    brown
+                  </span>
+                </li>
+                <li
+                  class="available-colors-list__item available-colors-list__item--beige"
+                >
+                  <span class="visually-hidden">
+                    <span class="visually-hidden">product name color:</span>
+                    beige
+                  </span>
+                </li>
+                <li
+                  class="available-colors-list__item available-colors-list__item--pink"
+                >
+                  <span class="visually-hidden">
+                    <span class="visually-hidden">product name color:</span>
+                    pink
+                  </span>
+                </li>
+                <li
+                  class="available-colors-list__item available-colors-list__item--purple"
+                >
+                  <span class="visually-hidden">
+                    <span class="visually-hidden">product name color:</span>
+                    purple
+                  </span>
+                </li>
+              </ul>
+              <span class="product-card__price">
+                <span class="visually-hidden">product name price:</span>
+                chf 40
+              </span>
+              <ul
+                class="tags-list product-card__tags-list"
+                role="list"
+                aria-label="tags"
+              >
+                <li class="tags-list__item">Sold out</li>
+              </ul>
+            </article>
+          </li>
+          <li class="product-carousel__item">
+            <article class="product-card product-carousel__product-card">
+              <h3 class="heading heading--l product-card__heading">
+                <a href="">product name</a>
+              </h3>
+              <img
+                class="product-card__image"
+                src="img/product-4.jpg"
+                width="248"
+                height="368"
+                alt=""
+                role="presentation"
+              />
+              <ul
+                class="available-colors-list product-card__available-colors-list"
+                role="list"
+                aria-label="available colors"
+              >
+                <li
+                  class="available-colors-list__item available-colors-list__item--brown"
+                >
+                  <span class="visually-hidden">
+                    <span class="visually-hidden">product name color:</span>
+                    brown
+                  </span>
+                </li>
+                <li
+                  class="available-colors-list__item available-colors-list__item--beige"
+                >
+                  <span class="visually-hidden">
+                    <span class="visually-hidden">product name color:</span>
+                    beige
+                  </span>
+                </li>
+                <li
+                  class="available-colors-list__item available-colors-list__item--pink"
+                >
+                  <span class="visually-hidden">
+                    <span class="visually-hidden">product name color:</span>
+                    pink
+                  </span>
+                </li>
+                <li
+                  class="available-colors-list__item available-colors-list__item--purple"
+                >
+                  <span class="visually-hidden">
+                    <span class="visually-hidden">product name color:</span>
+                    purple
+                  </span>
+                </li>
+              </ul>
+              <span class="product-card__price">
+                <span class="visually-hidden">product name price:</span>
+                chf 40
+              </span>
+            </article>
+          </li>
+        </ul>
+      </section>
     </main>
 
     <footer class="footer">
       <div class="footer__wrapper">
         <div class="footer__section-wrapper">
           <h2 class="heading heading--xl footer__heading">about</h2>
-          <span class="footer__store-info">
+          <address class="footer__store-info">
             susparsa store
             <br />
             geneva, switzerland
-          </span>
+          </address>
           <ul
             class="social-links footer__social-links"
             role="list"
@@ -674,7 +727,7 @@
               </a>
             </li>
           </ul>
-          <span class="footer__copyright">© Susparsa 2021</span>
+          <small class="footer__copyright">© Susparsa 2021</small>
         </div>
 
         <div class="footer__section-wrapper">
