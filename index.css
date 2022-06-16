@@ -75,10 +75,6 @@ a:hover {
 
 /* HEADER */
 
-.header__border-wrapper {
-  border-bottom: 1px solid var(--disabled-1);
-}
-
 .header__horizontal-rule {
   margin: 0;
   border-top: 1px solid var(--disabled-1);
