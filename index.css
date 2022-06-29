@@ -415,9 +415,10 @@ a:hover {
   position: relative;
 }
 
-.product-card:focus-within {
-  outline: 2px solid var(--primary);
+.product-card:focus-within,
+.product-card:hover {
   outline-offset: 8px;
+  outline: 2px solid var(--primary);
 }
 
 .product-card * {
@@ -442,11 +443,13 @@ a:hover {
 .product-card__heading a {
   display: inline-block;
   color: inherit;
-  outline-offset: 4px;
+  outline: none;
 }
 
-.product-card__heading a:focus-visible {
-  outline: none;
+.product-card__heading a::before {
+  position: absolute;
+  content: '';
+  inset: 0;
 }
 
 .product-card__heading a::first-letter {
@@ -975,6 +978,10 @@ a:hover {
 /* MOBILE */
 
 @media (max-width: 1076px) {
+  .header {
+    padding-top: 16px;
+  }
+
   .header__wrapper {
     flex-direction: column;
     padding: 0 16px;
