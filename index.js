@@ -9,31 +9,33 @@ console.log("You are a curious one, aren't you?");
       this.button = button;
       const id = this.button.getAttribute('aria-controls');
       this.description = document.getElementById(id);
+
+      this.toggle = this.toggle.bind(this);
     }
 
     init() {
-      this.button.addEventListener('click', this.toggleAccordion.bind(this));
+      this.button.addEventListener('click', this.toggle);
     }
 
     destroy() {
-      this.button.removeEventListener('click', this.toggleAccordion);
+      this.button.removeEventListener('click', this.toggle);
     }
 
-    openAccordion() {
+    expand() {
       this.button.setAttribute('aria-expanded', 'true');
       this.description.style.display = 'block';
     }
 
-    closeAccordion() {
+    collapse() {
       this.button.setAttribute('aria-expanded', 'false');
       this.description.style.display = 'none';
     }
 
-    toggleAccordion() {
+    toggle() {
       if (this.button.getAttribute('aria-expanded') === 'true') {
-        this.closeAccordion();
+        this.collapse();
       } else {
-        this.openAccordion();
+        this.expand();
       }
     }
   }
@@ -52,6 +54,8 @@ console.log("You are a curious one, aren't you?");
     constructor(fieldset) {
       this.fieldset = fieldset;
       this.pickedOption = this.fieldset.querySelector('legend span');
+
+      this.handleOptionChange = this.handleOptionChange.bind(this);
     }
 
     init() {
@@ -59,10 +63,7 @@ console.log("You are a curious one, aren't you?");
         'input[type=radio]:checked'
       );
       this.pickedOption.textContent = defaultOption.value;
-      this.fieldset.addEventListener(
-        'change',
-        this.handleOptionChange.bind(this)
-      );
+      this.fieldset.addEventListener('change', this.handleOptionChange);
     }
 
     destroy() {
@@ -100,18 +101,16 @@ console.log("You are a curious one, aren't you?");
       this.error = this.fieldset.querySelector(
         '[aria-live=polite][role=alert]'
       );
+
+      this.handleInput = this.handleInput.bind(this);
+      this.decreaseQuantity = this.decreaseQuantity.bind(this);
+      this.increaseQuantity = this.increaseQuantity.bind(this);
     }
 
     init() {
-      this.input.addEventListener('input', this.handleInput.bind(this));
-      this.buttonDecrease.addEventListener(
-        'click',
-        this.decreaseQuantity.bind(this)
-      );
-      this.buttonIncrease.addEventListener(
-        'click',
-        this.increaseQuantity.bind(this)
-      );
+      this.input.addEventListener('input', this.handleInput);
+      this.buttonDecrease.addEventListener('click', this.decreaseQuantity);
+      this.buttonIncrease.addEventListener('click', this.increaseQuantity);
     }
 
     destroy() {
@@ -219,10 +218,12 @@ console.log("You are a curious one, aren't you?");
       this.accessibilityCart = this.item.querySelector(
         '[aria-live=polite][role=status]'
       );
+
+      this.handleAddToCart = this.handleAddToCart.bind(this);
     }
 
     init() {
-      this.button.addEventListener('click', this.handleAddToCart.bind(this));
+      this.button.addEventListener('click', this.handleAddToCart);
     }
 
     destroy() {
@@ -256,10 +257,12 @@ console.log("You are a curious one, aren't you?");
     constructor(form, quantityPicker) {
       this.form = form;
       this.quantityPicker = quantityPicker;
+
+      this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     init() {
-      this.form.addEventListener('submit', this.handleSubmit.bind(this));
+      this.form.addEventListener('submit', this.handleSubmit);
     }
 
     destroy() {
